@@ -1,23 +1,23 @@
-Program BMI;
+Program vypocet_bmi;
 uses crt;
-var vaha, vyska, bmi: real;
+var vyska, hmotnost, bmi: real;
 begin
   clrscr;
   gotoxy(20,5);
-  writeln('Kalkulator BMI');
+  writeln ('kalkulacka bmi');
   gotoxy(20,7);
   write('Vyska (m): '); readln(vyska);
   gotoxy(20,9);
-  write('Vaha (kg): '); readln(vaha);
-  bmi := vaha / (vyska * vyska);
+  write('hmotnost(kg): '); readln(hmotnost);
+  bmi := hmotnost / (vyska * vyska);
   gotoxy(20,12);
   writeln('BMI = ', bmi:5:2);
   gotoxy(20,14);
   if bmi < 20 then
-    writeln('Podvaha')
+  writeln('Podvaha')
   else if bmi > 25 then
-    writeln('Nadvaha')
+  writeln('Nadvaha')
   else
-    writeln('Normal');
+  writeln('Normal');
   repeat until keypressed;
 end.
